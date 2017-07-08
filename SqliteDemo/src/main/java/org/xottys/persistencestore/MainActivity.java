@@ -1,3 +1,15 @@
+/**
+ * 本例演示了SQLite数据库读写的三种方式：
+ * 1）SQL语句读写    2）Android特定方法读写   3）GreenDao第三方库方式读写
+ * <p>
+ * <br/>Copyright (C), 2017-2018, Steve Chang
+ * <br/>This program is protected by copyright laws.
+ * <br/>Program Name:SqliteDEMO
+ * <br/>Date:July，2017
+ *
+ * @author xottys@163.com
+ * @version 1.0
+ */
 package org.xottys.persistencestore;
 
 import android.app.Activity;
@@ -216,8 +228,6 @@ public class MainActivity extends Activity {
                     account = new BankAccount(null, "张三", "SZ16123", 3000);
                     bankAccountDao.insert(account);
 
-
-
                     //用raw方法查询数据库全部记录
                     Cursor cursor = bankAccountDao.getDatabase().rawQuery("select * from BANK_ACCOUNT", null);
                     inflateListview(cursor, 3);
@@ -251,13 +261,11 @@ public class MainActivity extends Activity {
                     inflateListview(null, 4);
 
                     bt3.setText("Next\n Delete");
-
-
                 } else if (bt3.getText().equals("Next\n Delete")) {
                     //用DeleteQuery删除记录，可以批量删除满足特定条件的记录
                     bankAccountDao.queryBuilder().where(BankAccountDao.Properties.Name.eq("李四")).buildDelete().
                             executeDeleteWithoutDetachingEntities();
-                  /*另一种记录删除方法
+                   /*另一种记录删除方法
                    accountList = bankAccountDao.queryBuilder().where(BankAccountDao.Properties.Name.eq("王五")).build().list();
                    for(BankAccount acct:accountList) {
                        //删除数据库记录，每次只能删1条记录
@@ -305,7 +313,6 @@ public class MainActivity extends Activity {
                         , new int[]{R.id.name, R.id.age, R.id.salary},
                         CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER);
                 break;
-
             case 3:
                 adapter = new SimpleCursorAdapter(
                         this,
@@ -329,11 +336,8 @@ public class MainActivity extends Activity {
                         new int[]{R.id.name, R.id.age, R.id.salary});
                 // lv.setAdapter(adapter);
                 break;
-
-
         }
         // 显示数据
         lv.setAdapter(adapter);
-        Log.i(TAG, "inflateListview: ");
     }
 }

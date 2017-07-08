@@ -1,5 +1,14 @@
 /**
+ * 本例演示了SQLiteOpenHelper的作用：
+ * 1）一次性建表    2）数据库版本升级处理
+ * <p>
+ * <br/>Copyright (C), 2017-2018, Steve Chang
+ * <br/>This program is protected by copyright laws.
+ * <br/>Program Name:SqliteDEMO
+ * <br/>Date:July，2017
  *
+ * @author xottys@163.com
+ * @version 1.0
  */
 package org.xottys.persistencestore;
 

@@ -1,3 +1,14 @@
+/**
+ * 定义实体类后，GreenDao会自动生成相关setter／getter
+ * <p>
+ * <br/>Copyright (C), 2017-2018, Steve Chang
+ * <br/>This program is protected by copyright laws.
+ * <br/>Program Name:SqliteDEMO
+ * <br/>Date:July，2017
+ *
+ * @author xottys@163.com
+ * @version 1.0
+ */
 package org.xottys.persistencestore;
 
 import org.greenrobot.greendao.annotation.Entity;
@@ -5,9 +16,6 @@ import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Transient;
 import org.greenrobot.greendao.annotation.Generated;
 
-/**
- * Created by changqing on 2017/7/6.
- */
 @Entity
 public class BankAccount {
     @Id
