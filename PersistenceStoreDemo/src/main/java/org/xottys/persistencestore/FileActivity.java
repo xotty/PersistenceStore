@@ -42,7 +42,7 @@ import java.util.Scanner;
 
 import static android.content.ContentValues.TAG;
 
-public class MainActivity extends Activity {
+public class FileActivity extends Activity {
     final String FILE_NAME = "xottys.txt";
     private EditText edit1, edit2;
     private String content;
@@ -50,7 +50,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_file);
         edit1 = (EditText) findViewById(R.id.edit1);
         edit2 = (EditText) findViewById(R.id.edit2);
 

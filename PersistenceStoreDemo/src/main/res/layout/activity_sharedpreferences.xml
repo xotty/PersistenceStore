@@ -57,7 +57,7 @@
             android:background="@android:color/darker_gray"
             android:hint="输入或显示SharedPrefence中的内容"
             android:inputType="text"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:maxLines="5"/>
 
 </LinearLayout>

@@ -33,7 +33,7 @@ import java.util.List;
 import java.util.Map;
 
 
-public class MainActivity extends Activity {
+public class SqliteActivity extends Activity {
     private final String TAG = "SqliteDemo";
     private Button bt1, bt2, bt3;
     private TextView tv_age, tv_class;
@@ -49,7 +49,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_sqlite);
         bt1 = (Button) findViewById(R.id.bt1);
         bt2 = (Button) findViewById(R.id.bt2);
         bt3 = (Button) findViewById(R.id.bt3);
@@ -68,7 +68,7 @@ public class MainActivity extends Activity {
 
         tv_name.setText("姓名");
 
-        DaoMaster.DevOpenHelper devOpenHelper = new DaoMaster.DevOpenHelper(MainActivity.this.getApplicationContext(), "myDBx", null);
+        DaoMaster.DevOpenHelper devOpenHelper = new DaoMaster.DevOpenHelper(SqliteActivity.this.getApplicationContext(), "myDBx", null);
         DaoMaster daoMaster = new DaoMaster(devOpenHelper.getWritableDatabase());
         DaoSession daoSession = daoMaster.newSession();
         bankAccountDao = daoSession.getBankAccountDao();
@@ -150,7 +150,7 @@ public class MainActivity extends Activity {
                 if (bt2.getText().equals("Start\n CRUD")) {
                     // 创建MyDatabaseHelper对象，指定数据库版本为1，此处使用相对路径即可，
                     // 数据库文件自动会保存在程序的数据文件夹的databases目录下。
-                    dbHelper = new MyDatabaseHelper(MainActivity.this, "myDB", 2);
+                    dbHelper = new MyDatabaseHelper(SqliteActivity.this, "myDB", 2);
                     db = dbHelper.getReadableDatabase();
 
                     //添加1条记录
@@ -329,7 +329,7 @@ public class MainActivity extends Activity {
                     listem.put("balance", acct.getBalance());
                     listems.add(listem);
                 }
-                adapter = new SimpleAdapter(MainActivity.this, listems,
+                adapter = new SimpleAdapter(SqliteActivity.this, listems,
                         R.layout.line_items, new String[]{"name", "accountNumber", "balance"},
                         new int[]{R.id.name, R.id.age, R.id.salary});
                 // lv.setAdapter(adapter);

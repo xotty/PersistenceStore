@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FileDemo/FileDemo.iml" filepath="$PROJECT_DIR$/FileDemo/FileDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/PersistenceStore.iml" filepath="$PROJECT_DIR$/PersistenceStore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PersistenceStoreDemo/PersistenceStoreDemo.iml" filepath="$PROJECT_DIR$/PersistenceStoreDemo/PersistenceStoreDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PersistenceStoreDemo/PersistenceStoreDemo.iml" filepath="$PROJECT_DIR$/PersistenceStoreDemo/PersistenceStoreDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/SharedPreferencesDemo/SharedPreferencesDemo.iml" filepath="$PROJECT_DIR$/SharedPreferencesDemo/SharedPreferencesDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/SqliteDemo/SqliteDemo.iml" filepath="$PROJECT_DIR$/SqliteDemo/SqliteDemo.iml" />
     </modules>

@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/FileDemo" />
+            <option value="$PROJECT_DIR$/PersistenceStoreDemo" />
             <option value="$PROJECT_DIR$/SharedPreferencesDemo" />
             <option value="$PROJECT_DIR$/SqliteDemo" />
           </set>

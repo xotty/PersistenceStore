@@ -2,6 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/SharedPreferencesDemo/src/main/java/org/xottys/persistencestore" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/SharedPreferencesDemo/src/main/java/org/xottys/persistencestore" vcs="" />
   </component>
 </project>

@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">PersistenceStore</string>
+    <string name="app_name">SharedPreference</string>
+    <string name="title_activity_main">MainActivity</string>
 </resources>
